@@ -45,6 +45,8 @@ exports.getMainProject = async(req,res)=>{
     console.log(searchKey);
     const query ={
         breed:{
+
+            //regular expression
             //i = to remove case sensitivity
             $regex:searchKey,$options:'i'
         }

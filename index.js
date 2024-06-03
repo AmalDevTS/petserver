@@ -1,7 +1,5 @@
 const router = require('./Routes/router')
 
-const appMiddleware = require('./Middlewares/appMiddleware')
-const jwtMiddleware= require('./Middlewares/jwtMiddleware')
 
 //1) import dotenv
 require('dotenv').config()
@@ -18,7 +16,7 @@ const cors = require('cors')
 //4) create server
 const petServer = express();
 
-//5) make use of cors by server
+//5) make use of cors middleware from express by server
 petServer.use(cors())
 
 //6) use a middleware, to convert json to javascript object
